@@ -1,0 +1,6 @@
+torch
+torchvision
+triton
+numpy
+pandas
+matplotlib
