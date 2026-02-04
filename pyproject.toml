@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpu-llm-flash-attention"
+version = "0.1.0"
+description = "Flash Attention implementations with Triton"
+requires-python = ">=3.8"
+dependencies = [
+    "torch",
+    "triton",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "einops",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["flash_attention*", "online_softmax*", "softmax_matmul*", "utils*", "benchmarking*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
