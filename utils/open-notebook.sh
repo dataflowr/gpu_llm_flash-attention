@@ -9,9 +9,8 @@ GIT_REPO=gpu_llm_flash-attention
 git clone --depth 1 https://github.com/dataflowr/${GIT_REPO}.git
 chown -R onyxia:users ${GIT_REPO}/
 
-# Install additional packages if a requirements.txt file is present in the project
-REQUIREMENTS_FILE=${GIT_REPO}/requirements.txt
-[ -f $REQUIREMENTS_FILE ] && pip install -r $REQUIREMENTS_FILE
+# Install the package in editable mode
+pip install -e ${GIT_REPO}
 
 # Open the relevant notebook when starting Jupyter Lab
 echo "c.LabApp.default_url = '/lab/tree/${GIT_REPO}/FlashAttention_empty.ipynb'" >> /home/onyxia/.jupyter/jupyter_server_config.py
