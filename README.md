@@ -8,8 +8,6 @@ Learn how to implement [FlashAttention-2](https://arxiv.org/abs/2307.08691) from
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Homework](#homework)
-- [Running Tests](#running-tests)
-- [Benchmarking](#benchmarking)
 - [Submission](#submission)
 
 ## Course Material
@@ -68,48 +66,3 @@ After completing the course, implement the full Flash-Attention algorithm:
 
 > ⚠️ **GPU Compatibility:** Triton is optimized for Hopper architecture (H100). There are known issues with Turing GPUs (T4). As a result, it might be difficult to have Triton code running properly on Turing GPUs and if possible, you should use a H100 for your Triton implementation of Flash-Attention.
 
-
-## Running Tests
-
-Run the full test suite:
-
-```bash
-pytest -v ./tests
-```
-
-Run specific test modules:
-
-```bash
-pytest tests/test_online_softmax.py -v   # Online softmax
-pytest tests/test_softmax_matmul.py -v   # Softmax-matmul
-pytest tests/test_flash_attention.py -v  # Flash Attention
-pytest tests/test_attention.py -v        # Standard attention
-```
-
-## Benchmarking
-
-Compare performance of different implementations:
-
-```bash
-python -m benchmarking.bench_online_softmax
-python -m benchmarking.bench_softmax_matmul
-python -m benchmarking.bench_attention
-```
-
-## Submission
-
-Run the automated test and submission script:
-
-```bash
-bash test_and_submit.sh
-```
-
-This script will:
-1. Detect and save your GPU type to `gpu_type.txt`
-2. Install the package in editable mode
-3. Run all tests and generate `test_results.xml`
-4. Package everything into `llm2026-flashattention-submission.zip`
-
-## License
-
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
