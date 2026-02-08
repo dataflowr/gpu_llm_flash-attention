@@ -52,7 +52,7 @@ def get_fused_softmax_function() -> Callable:
     Returns:
         A callable that computes fused softmax-matmul.
     """
-    from softmax_matmul.softmax_matmul import fused_softmax
+    from softmax_matmul.softmax_matmul_sol import fused_softmax
 
     return fused_softmax
 
@@ -65,7 +65,7 @@ def get_softmax_matmul_reference() -> Callable:
     Returns:
         A callable that computes the reference softmax-matmul.
     """
-    from softmax_matmul.softmax_matmul import softmax_mult
+    from softmax_matmul.softmax_matmul_sol import softmax_mult
 
     return softmax_mult
 

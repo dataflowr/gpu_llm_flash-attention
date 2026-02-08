@@ -14,10 +14,9 @@ dependencies = [
     "pandas",
     "matplotlib",
     "einops",
+    "jaxtyping",
+    "pytest",
 ]
-
-[project.optional-dependencies]
-dev = ["pytest"]
 
 [tool.setuptools.packages.find]
 include = ["flash_attention*", "online_softmax*", "softmax_matmul*", "utils*", "benchmarking*"]
