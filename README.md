@@ -46,6 +46,11 @@ pip install -e .
 
 The `-e` flag installs the package in *editable* (development) mode. Instead of copying files, pip creates a link to your source code. This means any changes you make to the code take effect immediately without reinstalling.
 
+To verify your installation, run:
+
+```bash
+pytest tests/test_online_softmax.py -v
+```
 
 ## Project Structure
 
