@@ -87,7 +87,7 @@ Want to go further? Try to improve the performance of your implementation using 
 - You must use Triton (no CUDA)
 - The implementation must be your own work (no pre-existing implementations)
 
-**Benchmarking:** Measure your performance on an H100 GPU using `benchmarking/flash_attn_leaderboard_benchmark.py`.
+**Benchmarking:** Measure your performance on an H100 GPU using `benchmarking/submit_leaderboard.py`.
 
 **Optimization ideas:**
 - Tune tile sizes for your kernel (use Triton's autotune feature)
